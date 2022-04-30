@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.capstone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Rash Detective"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidCapstone">
+        <activity
+            android:name=".activities.RashInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".imageclassification.LiveFeedClassificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".imageclassification.ImageClassificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.LineChartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ChannelActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
